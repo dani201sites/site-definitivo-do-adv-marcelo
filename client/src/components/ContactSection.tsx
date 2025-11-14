@@ -43,7 +43,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="py-24 bg-background" data-testid="section-contact">
+    <section id="contato" className="py-24 bg-background" data-testid="section-contact">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground" data-testid="text-contact-title">

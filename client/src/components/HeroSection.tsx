@@ -4,7 +4,7 @@ import heroImage from "@assets/WhatsApp_Image_2025-11-13_at_18.23.27_17630824460
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{

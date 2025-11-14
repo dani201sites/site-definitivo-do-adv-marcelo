@@ -26,7 +26,7 @@ export default function DifferentiatorsSection() {
   ];
 
   return (
-    <section className="py-24 bg-black" data-testid="section-differentiators">
+    <section id="diferenciais" className="py-24 bg-black" data-testid="section-differentiators">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white" data-testid="text-differentiators-title">

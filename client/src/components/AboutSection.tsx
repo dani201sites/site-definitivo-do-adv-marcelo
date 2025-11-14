@@ -9,7 +9,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-24 bg-background" data-testid="section-about">
+    <section id="sobre" className="py-24 bg-background" data-testid="section-about">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
