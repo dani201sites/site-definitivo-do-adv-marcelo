@@ -19,7 +19,7 @@ export default function DeepDiveSection() {
               <img
                 src={logoImage}
                 alt="Logo Marcelo Camargo"
-                className="h-32 w-32 object-contain"
+                className="h-48 w-48 object-contain"
                 data-testid="img-logo"
               />
             </div>
