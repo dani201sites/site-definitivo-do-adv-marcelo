@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react";
-import secondaryImage from "@assets/generated_images/Lawyer_working_at_desk_36fe6140.png";
+import secondaryImage from "@assets/WhatsApp_Image_2025-11-13_at_22.08.42_1763082545333.jpg";
 
 export default function DeepDiveSection() {
   const highlights = [
