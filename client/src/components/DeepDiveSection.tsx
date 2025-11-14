@@ -15,11 +15,11 @@ export default function DeepDiveSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-12">
               <img
                 src={logoImage}
                 alt="Logo Marcelo Camargo"
-                className="h-48 w-48 object-contain"
+                className="h-56 w-56 object-contain"
                 data-testid="img-logo"
               />
             </div>
