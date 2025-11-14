@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import secondaryImage from "@assets/WhatsApp_Image_2025-11-13_at_22.08.42_1763082545333.jpg";
+import logoImage from "@assets/WhatsApp_Image_2025-11-13_at_22.18.11-Photoroom_1763085413586.png";
 
 export default function DeepDiveSection() {
   const highlights = [
@@ -14,6 +15,14 @@ export default function DeepDiveSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
+            <div className="flex justify-center md:justify-start mb-6">
+              <img
+                src={logoImage}
+                alt="Logo Marcelo Camargo"
+                className="h-20 w-20 object-contain"
+                data-testid="img-logo"
+              />
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-foreground" data-testid="text-deep-dive-title">
               Por Que Escolher Marcelo Camargo
             </h2>
