@@ -26,13 +26,13 @@ export default function DifferentiatorsSection() {
   ];
 
   return (
-    <section className="py-24 bg-card" data-testid="section-differentiators">
+    <section className="py-24 bg-black" data-testid="section-differentiators">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground" data-testid="text-differentiators-title">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white" data-testid="text-differentiators-title">
             Diferenciais do Escritório
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-differentiators-subtitle">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto" data-testid="text-differentiators-subtitle">
             O que torna nossa atuação única e eficaz
           </p>
         </div>
@@ -41,17 +41,17 @@ export default function DifferentiatorsSection() {
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Card key={index} className="hover-elevate" data-testid={`card-differentiator-${index}`}>
+              <Card key={index} className="bg-white/5 border-white/10 hover-elevate" data-testid={`card-differentiator-${index}`}>
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-md flex-shrink-0">
-                      <Icon className="h-6 w-6 text-primary" />
+                    <div className="p-3 bg-white/10 rounded-md flex-shrink-0">
+                      <Icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-foreground" data-testid={`text-differentiator-title-${index}`}>
+                      <h3 className="text-xl font-semibold mb-2 text-white" data-testid={`text-differentiator-title-${index}`}>
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed" data-testid={`text-differentiator-description-${index}`}>
+                      <p className="text-white/70 leading-relaxed" data-testid={`text-differentiator-description-${index}`}>
                         {item.description}
                       </p>
                     </div>
