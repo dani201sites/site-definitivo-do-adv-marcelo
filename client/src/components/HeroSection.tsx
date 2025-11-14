@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-import heroImage from "@assets/generated_images/Professional_lawyer_portrait_hero_e6696e9e.png";
+import heroImage from "@assets/WhatsApp_Image_2025-11-13_at_18.23.27_1763082446079.jpg";
 
 export default function HeroSection() {
   return (
