@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 export default function AboutSection() {
   const stats = [
-    { icon: Award, label: "Com Quase 20 Anos de Experiência", value: "" },
+    { icon: Award, label: "Anos de Experiência", value: "Quase 20" },
     { icon: Scale, label: "Tribunal do Júri", value: "Especialista" },
     { icon: Users, label: "Defesa Criminal", value: "Estratégica" },
   ];
@@ -41,20 +41,12 @@ export default function AboutSection() {
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      {stat.value ? (
-                        <>
-                          <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
-                            {stat.value}
-                          </div>
-                          <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
-                            {stat.label}
-                          </div>
-                        </>
-                      ) : (
-                        <div className="text-lg font-bold text-foreground" data-testid={`text-stat-label-${index}`}>
-                          {stat.label}
-                        </div>
-                      )}
+                      <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
+                        {stat.label}
+                      </div>
                     </div>
                   </div>
                 </Card>
