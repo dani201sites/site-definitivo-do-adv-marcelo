@@ -1,22 +1,22 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Gavel, Shield, FileText } from "lucide-react";
+import { Gavel, Shield, Landmark } from "lucide-react";
 
 export default function ExpertiseSection() {
   const services = [
-    {
-      icon: Gavel,
-      title: "Tribunal do Júri",
-      description: "Experiência consolidada na defesa perante o Tribunal do Júri, com sustentação oral estratégica e técnica refinada para garantir a melhor apresentação do caso aos jurados.",
-    },
     {
       icon: Shield,
       title: "Defesa Criminal Estratégica",
       description: "Atuação completa em todas as fases do processo criminal, desde a investigação policial até os recursos em tribunais superiores, com análise criteriosa de cada etapa processual.",
     },
     {
-      icon: FileText,
-      title: "Atuação em Plenário",
-      description: "Presença ativa e preparada em audiências e sessões plenárias, com argumentação sólida e conhecimento aprofundado da legislação penal e processual penal.",
+      icon: Gavel,
+      title: "Atuação em Plenário do Tribunal do Júri",
+      description: "Experiência consolidada na defesa perante o Tribunal do Júri, com presença ativa e preparada em sessões plenárias. Sustentação oral estratégica, argumentação sólida e técnica refinada para garantir a melhor apresentação do caso aos jurados, aliada ao conhecimento aprofundado da legislação penal e processual penal.",
+    },
+    {
+      icon: Landmark,
+      title: "Atuação em Tribunais Superiores",
+      description: "Experiência na condução de recursos e processos junto ao Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF), garantindo a defesa dos direitos constitucionais dos clientes nas mais altas instâncias do Poder Judiciário brasileiro.",
     },
   ];
 
