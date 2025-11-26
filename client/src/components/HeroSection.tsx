@@ -19,7 +19,7 @@ export default function HeroSection() {
           Marcelo Camargo Advocacia
         </h1>
         <p className="text-xl md:text-2xl lg:text-3xl font-light mb-4 text-white/95" data-testid="text-hero-subtitle">
-          20 Anos Defendendo Seus Direitos no Direito Criminal
+          Quase 20 Anos Defendendo Seus Direitos no Direito Criminal
         </p>
         <p className="text-lg md:text-xl mb-8 text-white/90 max-w-3xl mx-auto" data-testid="text-hero-description">
           Especialista em Tribunal do Júri e Defesa Criminal com atuação estratégica e personalizada
