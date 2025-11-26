@@ -40,11 +40,11 @@ export default function DeepDiveSection() {
             </div>
           </div>
           
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 flex justify-center">
             <img
               src={secondaryImage}
               alt="Marcelo Camargo trabalhando"
-              className="rounded-md w-full h-auto object-contain"
+              className="rounded-md w-[85%] md:w-full h-auto object-contain"
               data-testid="img-deep-dive"
             />
           </div>
