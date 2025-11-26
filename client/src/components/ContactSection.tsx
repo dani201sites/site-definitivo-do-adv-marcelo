@@ -23,7 +23,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       title: "Endereço",
-      content: "Avenida Principal, 1234 - Centro\nMaringá - PR",
+      content: "Avenida Luiz Rosseto, nº 352\nJardim Caravele - Londrina - PR",
     },
     {
       icon: Mail,
@@ -136,10 +136,18 @@ export default function ContactSection() {
 
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="h-64 bg-muted flex items-center justify-center text-muted-foreground">
-                  <MapPin className="h-12 w-12" />
-                  <span className="ml-2">Mapa de Localização</span>
-                </div>
+                <iframe
+                  src="https://maps.google.com/maps?q=Avenida+Luiz+Rosseto+352+Jardim+Caravele+Londrina+PR+Brasil&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="256"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização do escritório"
+                  className="h-64"
+                  data-testid="map-location"
+                />
               </CardContent>
             </Card>
           </div>
