@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 export default function AboutSection() {
   const stats = [
-    { icon: Award, label: "Anos de Experiência", value: "20+" },
+    { icon: Award, label: "Com Quase 20 Anos de Experiência", value: "" },
     { icon: Scale, label: "Tribunal do Júri", value: "Especialista" },
     { icon: Users, label: "Defesa Criminal", value: "Estratégica" },
   ];
@@ -20,10 +20,10 @@ export default function AboutSection() {
               Com quase duas décadas de atuação exclusiva em Direito Criminal, Marcelo Camargo construiu uma carreira sólida baseada na defesa estratégica e comprometida de seus clientes.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Especializado em Tribunal do Júri e com vasta experiência em plenário, oferece uma defesa técnica e humanizada, sempre atento aos detalhes que podem fazer a diferença em cada caso.
+              Especializado e com vasta experiência na defesa criminal e em plenário do Tribunal do Júri oferece uma defesa técnica e humanizada, sempre atento aos detalhes que podem fazer a diferença em cada caso.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sua atuação abrange desde crimes contra a pessoa até defesas complexas em processos de grande repercussão, sempre com o objetivo de garantir os direitos constitucionais de cada cliente.
+              Sua atuação abrange desde crimes contra a pessoa até defesas complexas em processos de grande repercussão, sempre com o objetivo de garantir os direitos constitucionais de cada cliente. Atuando em vários Tribunais dos Estados da Federação e inclusive junto ao Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF).
             </p>
           </div>
           
@@ -41,12 +41,20 @@ export default function AboutSection() {
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
-                        {stat.label}
-                      </div>
+                      {stat.value ? (
+                        <>
+                          <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
+                            {stat.value}
+                          </div>
+                          <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
+                            {stat.label}
+                          </div>
+                        </>
+                      ) : (
+                        <div className="text-lg font-bold text-foreground" data-testid={`text-stat-label-${index}`}>
+                          {stat.label}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
