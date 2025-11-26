@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -28,17 +28,12 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "E-mail",
-      content: "contato@marcelocamargo.adv.br",
+      content: "marceloapcsouza@bol.com.br",
     },
     {
       icon: Phone,
       title: "Telefone",
-      content: "(44) 99999-9999",
-    },
-    {
-      icon: Clock,
-      title: "Horário de Atendimento",
-      content: "Segunda a Sexta: 9h às 18h",
+      content: "(43) 98402-4725",
     },
   ];
 
