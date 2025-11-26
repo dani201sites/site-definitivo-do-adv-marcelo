@@ -44,7 +44,7 @@ export default function DeepDiveSection() {
             <img
               src={secondaryImage}
               alt="Marcelo Camargo trabalhando"
-              className="rounded-md w-full h-auto object-cover"
+              className="rounded-md w-full max-h-[400px] md:max-h-none h-auto object-cover"
               data-testid="img-deep-dive"
             />
           </div>
