@@ -51,9 +51,9 @@ export default function Footer() {
               Contato
             </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li data-testid="text-footer-email">contato@marcelocamargo.adv.br</li>
-              <li data-testid="text-footer-phone">(44) 99999-9999</li>
-              <li data-testid="text-footer-address">Maringá - PR</li>
+              <li data-testid="text-footer-email">marceloapcsouza@bol.com.br</li>
+              <li data-testid="text-footer-phone">(43) 98402-4725</li>
+              <li data-testid="text-footer-address">Av. Luiz Rosseto, 352 - Londrina - PR</li>
             </ul>
           </div>
         </div>

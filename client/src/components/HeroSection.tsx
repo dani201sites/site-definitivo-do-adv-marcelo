@@ -28,7 +28,7 @@ export default function HeroSection() {
           size="lg"
           className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6 h-auto"
           data-testid="button-hero-contact"
-          onClick={() => console.log('WhatsApp contact clicked')}
+          onClick={() => window.open("https://wa.link/ueom1n", "_blank")}
         >
           <MessageCircle className="mr-2 h-5 w-5" />
           Agende uma Consulta

@@ -16,7 +16,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    window.open("https://wa.link/ueom1n", "_blank");
   };
 
   const contactInfo = [
