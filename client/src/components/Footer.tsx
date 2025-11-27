@@ -1,11 +1,19 @@
 import { Scale } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border py-12" data-testid="footer">
+    <motion.footer 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="bg-card border-t border-border py-12" 
+      data-testid="footer"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -69,6 +77,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

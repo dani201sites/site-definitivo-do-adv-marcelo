@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Scale, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,10 @@ export default function Header() {
   };
 
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-white/10 transition-all duration-300"
       data-testid="header"
     >
@@ -84,6 +88,6 @@ export default function Header() {
           )}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

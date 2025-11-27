@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Gavel, Shield, Landmark } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ExpertiseSection() {
   const services = [
@@ -23,34 +24,48 @@ export default function ExpertiseSection() {
   return (
     <section id="especializacao" className="py-24 bg-card" data-testid="section-expertise">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-16"
+        >
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground" data-testid="text-expertise-title">
             Áreas de Especialização
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-expertise-subtitle">
             Atuação focada e especializada em Direito Criminal
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="hover-elevate" data-testid={`card-service-${index}`}>
-                <CardHeader>
-                  <div className="mb-4 p-3 bg-primary/10 rounded-md w-fit">
-                    <Icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-2xl mb-2" data-testid={`text-service-title-${index}`}>
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed" data-testid={`text-service-description-${index}`}>
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+              >
+                <Card className="hover-elevate h-full" data-testid={`card-service-${index}`}>
+                  <CardHeader>
+                    <div className="mb-4 p-3 bg-primary/10 rounded-md w-fit">
+                      <Icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl mb-2" data-testid={`text-service-title-${index}`}>
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed" data-testid={`text-service-description-${index}`}>
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
             );
           })}
         </div>

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Briefcase, Users2, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function DifferentiatorsSection() {
   const differentiators = [
@@ -28,36 +29,50 @@ export default function DifferentiatorsSection() {
   return (
     <section id="diferenciais" className="py-24 bg-black" data-testid="section-differentiators">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-16"
+        >
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white" data-testid="text-differentiators-title">
             Diferenciais do Escritório
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto" data-testid="text-differentiators-subtitle">
             O que torna nossa atuação única e eficaz
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Card key={index} className="bg-white/5 border-white/10 hover-elevate" data-testid={`card-differentiator-${index}`}>
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/10 rounded-md flex-shrink-0">
-                      <Icon className="h-6 w-6 text-white" />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+              >
+                <Card className="bg-white/5 border-white/10 hover-elevate h-full" data-testid={`card-differentiator-${index}`}>
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-white/10 rounded-md flex-shrink-0">
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2 text-white" data-testid={`text-differentiator-title-${index}`}>
+                          {item.title}
+                        </h3>
+                        <p className="text-white/70 leading-relaxed" data-testid={`text-differentiator-description-${index}`}>
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-white" data-testid={`text-differentiator-title-${index}`}>
-                        {item.title}
-                      </h3>
-                      <p className="text-white/70 leading-relaxed" data-testid={`text-differentiator-description-${index}`}>
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </motion.div>
             );
           })}
         </div>

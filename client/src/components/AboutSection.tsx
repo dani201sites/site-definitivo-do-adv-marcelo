@@ -1,5 +1,6 @@
 import { Scale, Users, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const stats = [
@@ -12,7 +13,12 @@ export default function AboutSection() {
     <section id="sobre" className="py-24 bg-background" data-testid="section-about">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-foreground" data-testid="text-about-title">
               Experiência e Dedicação em Direito Criminal
             </h2>
@@ -25,31 +31,38 @@ export default function AboutSection() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Sua atuação abrange desde crimes contra a pessoa até defesas complexas em processos de grande repercussão, sempre com o objetivo de garantir os direitos constitucionais de cada cliente. Atuando em vários Tribunais dos Estados da Federação e inclusive junto ao Superior Tribunal de Justiça (STJ) e Supremo Tribunal Federal (STF).
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 gap-6">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <Card
+                <motion.div
                   key={index}
-                  className="p-6 hover-elevate"
-                  data-testid={`card-stat-${index}`}
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-md">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
-                        {stat.value}
+                  <Card
+                    className="p-6 hover-elevate"
+                    data-testid={`card-stat-${index}`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="p-3 bg-primary/10 rounded-md">
+                        <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
-                        {stat.label}
+                      <div>
+                        <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
+                          {stat.value}
+                        </div>
+                        <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
+                          {stat.label}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </motion.div>
               );
             })}
           </div>
