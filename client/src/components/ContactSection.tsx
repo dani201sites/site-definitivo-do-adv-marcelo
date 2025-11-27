@@ -129,23 +129,6 @@ export default function ContactSection() {
               );
             })}
 
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <iframe
-                  src="https://maps.google.com/maps?q=Avenida+Luiz+Rosseto+352+Jardim+Caravele+Londrina+PR+Brasil&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="256"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Localização do escritório"
-                  className="h-64"
-                  data-testid="map-location"
-                />
-              </CardContent>
-            </Card>
-
             <div className="grid grid-cols-2 gap-4">
               <Card 
                 className="hover-elevate cursor-pointer" 
@@ -183,6 +166,23 @@ export default function ContactSection() {
                 </CardContent>
               </Card>
             </div>
+
+            <Card className="overflow-hidden">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://maps.google.com/maps?q=Avenida+Luiz+Rosseto+352+Jardim+Caravele+Londrina+PR+Brasil&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="256"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização do escritório"
+                  className="h-64"
+                  data-testid="map-location"
+                />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
