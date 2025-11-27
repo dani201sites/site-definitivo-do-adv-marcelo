@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="font-serif text-xl font-bold text-foreground">Marcelo Camargo</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Advocacia especializada em Direito Criminal com 20 anos de experiência.
+              Advocacia especializada em Direito Criminal com quase 20 anos de experiência.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
             © {currentYear} Marcelo Camargo Advocacia. Todos os direitos reservados.
           </p>
           <p className="mt-2" data-testid="text-footer-oab">
-            OAB/PR 00.000
+            OAB Pr 53.582
           </p>
         </div>
       </div>
