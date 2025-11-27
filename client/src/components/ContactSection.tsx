@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Instagram } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -145,6 +145,44 @@ export default function ContactSection() {
                 />
               </CardContent>
             </Card>
+
+            <div className="grid grid-cols-2 gap-4">
+              <Card 
+                className="hover-elevate cursor-pointer" 
+                data-testid="card-instagram-personal"
+                onClick={() => window.open("https://www.instagram.com/marcelo.camarg0", "_blank")}
+              >
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    <div className="p-3 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-md">
+                      <Instagram className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-sm text-foreground">Instagram Pessoal</h3>
+                      <p className="text-xs text-muted-foreground">@marcelo.camarg0</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card 
+                className="hover-elevate cursor-pointer" 
+                data-testid="card-instagram-professional"
+                onClick={() => window.open("https://www.instagram.com/marcelocamargoadv", "_blank")}
+              >
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    <div className="p-3 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-md">
+                      <Instagram className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-sm text-foreground">Instagram Profissional</h3>
+                      <p className="text-xs text-muted-foreground">@marcelocamargoadv</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
