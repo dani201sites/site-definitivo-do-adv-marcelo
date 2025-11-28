@@ -58,7 +58,7 @@ export default function AboutSection() {
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-md">
                       {stat.icon && <stat.icon className="h-6 w-6 text-primary" />}
-                      {stat.image && <img src={stat.image} alt="OAB" className="h-6 w-6 object-contain" />}
+                      {stat.image && <img src={stat.image} alt="OAB" className="h-10 w-10 object-contain" />}
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
