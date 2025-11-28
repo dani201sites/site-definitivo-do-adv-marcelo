@@ -1,12 +1,21 @@
-import { Scale, Users, Award } from "lucide-react";
+import { Scale, Users, Award, LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import oabLogo from "@assets/Design_sem_nome_(7)-Photoroom_1764344903817.png";
+
+type StatItem = {
+  icon?: LucideIcon;
+  image?: string;
+  label: string;
+  value: string;
+};
 
 export default function AboutSection() {
-  const stats = [
+  const stats: StatItem[] = [
     { icon: Award, label: "Anos de Experiência", value: "Quase 20" },
     { icon: Scale, label: "Tribunal do Júri", value: "Especialista" },
     { icon: Users, label: "Defesa Criminal", value: "Estratégica" },
+    { image: oabLogo, label: "no Londrina Esporte Clube", value: "Conselheiro da OAB" },
   ];
 
   return (
@@ -34,37 +43,35 @@ export default function AboutSection() {
           </motion.div>
           
           <div className="grid grid-cols-1 gap-6">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+              >
+                <Card
+                  className="p-6 hover-elevate"
+                  data-testid={`card-stat-${index}`}
                 >
-                  <Card
-                    className="p-6 hover-elevate"
-                    data-testid={`card-stat-${index}`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-primary/10 rounded-md">
-                        <Icon className="h-6 w-6 text-primary" />
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-primary/10 rounded-md">
+                      {stat.icon && <stat.icon className="h-6 w-6 text-primary" />}
+                      {stat.image && <img src={stat.image} alt="OAB" className="h-6 w-6 object-contain" />}
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
+                        {stat.value}
                       </div>
-                      <div>
-                        <div className="text-3xl font-bold text-foreground" data-testid={`text-stat-value-${index}`}>
-                          {stat.value}
-                        </div>
-                        <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
-                          {stat.label}
-                        </div>
+                      <div className="text-sm text-muted-foreground" data-testid={`text-stat-label-${index}`}>
+                        {stat.label}
                       </div>
                     </div>
-                  </Card>
-                </motion.div>
-              );
-            })}
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
