@@ -56,7 +56,7 @@ export default function AboutSection() {
                   data-testid={`card-stat-${index}`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-md">
+                    <div className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-md overflow-visible shrink-0">
                       {stat.icon && <stat.icon className="h-6 w-6 text-primary" />}
                       {stat.image && <img src={stat.image} alt="OAB" className="h-10 w-10 object-contain" />}
                     </div>
