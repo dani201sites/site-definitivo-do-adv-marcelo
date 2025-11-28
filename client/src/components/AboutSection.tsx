@@ -1,7 +1,7 @@
 import { Scale, Users, Award, LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import oabLogo from "@assets/Design_sem_nome_(7)-Photoroom_1764344903817.png";
+import oabLogo from "@assets/Design_sem_nome_(8)-Photoroom_1764345536562.png";
 
 type StatItem = {
   icon?: LucideIcon;
